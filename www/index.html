@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manifold on ZEIT</title>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/www/style.css" />
+  </head>
+  <body>
+    <div id="Credentials"></div>
+    <script>
+      function main() {
+        return fetch('/api/resources.js').then(function(response) {
+          return response.text();
+        });
+      }
+      main();
+    </script>
+  </body>
+</html>
