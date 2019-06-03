@@ -5,5 +5,9 @@
     { "src": "www/**/*", "use": "@now/static" },
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
-  "routes": [{ "src": "/", "dest": "www/index.html" }]
+  "routes": [{ "src": "/", "dest": "www/index.html" }],
+  "env": {
+    "ACCOUNT": "@manifold_account",
+    "KEY": "@manifold_key"
+  }
 }
