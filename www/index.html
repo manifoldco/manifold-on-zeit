@@ -7,13 +7,17 @@
   </head>
   <body>
     <div id="Credentials"></div>
+    <form><input type="text" /><button type="submit">Log This</button></form>
+    <h2>Logs</h2>
+    <pre>
+      <code id="logs"></code>
+    </pre>
     <script>
-      function main() {
-        return fetch('/api/resources.js').then(function(response) {
-          return response.text();
-        });
+      async function logMessage(input) {
+        await fetch('/api/log.js', { method: 'POST', body: JSON.stringify(input) });
+        const logs = await fetch('/api/log.js');
+        document.querySelector('logs').innerHTML = logs.text();
       }
-      main();
     </script>
   </body>
 </html>

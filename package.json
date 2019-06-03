@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^4.16.4",
-    "helmet": "^3.18.0"
+    "helmet": "^3.18.0",
+    "logdna": "^3.0.2"
   },
   "devDependencies": {
     "prettier": "^1.17.1"
